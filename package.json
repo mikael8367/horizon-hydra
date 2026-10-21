@@ -1,12 +1,12 @@
 {
-  "name": "hydralauncher",
+  "name": "horizon-hydra",
   "version": "4.1.6",
-  "description": "Hydra",
+  "description": "Horizon — personalized desktop game library launcher",
   "main": "./out/main/index.js",
-  "author": "Los Broxas",
+  "author": "Horizon contributors (based on Hydra Launcher)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hydralauncher/hydra.git"
+    "url": "https://github.com/mikael8367/horizon-hydra.git"
   },
   "type": "module",
   "engines": {
