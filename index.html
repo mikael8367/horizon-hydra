@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07110b">
+  <meta name="description" content="Horizon — descubra, organize e encontre seus jogos favoritos em um só lugar.">
+  <title>Horizon — Biblioteca de jogos</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#inicio" aria-label="Horizon início"><span class="brand-mark">H</span><span>HORIZON<span class="brand-sub">WEB LIBRARY</span></span></a>
+      <div class="side-label">MENU</div>
+      <nav class="nav">
+        <a class="nav-link active" href="#inicio"><span>⌂</span> Início</a>
+        <a class="nav-link" href="#biblioteca"><span>▦</span> Biblioteca</a>
+        <a class="nav-link" href="#descobrir"><span>✦</span> Descobrir</a>
+      </nav>
+      <div class="side-label categories-label">CATEGORIAS</div>
+      <nav class="nav">
+        <button class="nav-link category-link" data-category="Todos"><span>◈</span> Todos os jogos</button>
+        <button class="nav-link category-link" data-category="Ação"><span>⚔</span> Ação</button>
+        <button class="nav-link category-link" data-category="Aventura"><span>✧</span> Aventura</button>
+        <button class="nav-link category-link" data-category="Indie"><span>◆</span> Indie</button>
+        <button class="nav-link category-link" data-category="Sandbox"><span>▧</span> Sandbox</button>
+      </nav>
+      <div class="sidebar-bottom"><span class="status-dot"></span> Biblioteca online<br><small>Links para fontes oficiais</small></div>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-menu" id="menuToggle" aria-label="Abrir menu">☰</button>
+        <div class="breadcrumbs">Horizon <span>/</span> <strong id="crumb">Início</strong></div>
+        <label class="search"><span>⌕</span><input id="searchInput" type="search" placeholder="Buscar jogos..." aria-label="Buscar jogos"><kbd>/</kbd></label>
+        <a class="github-link" href="https://github.com/mikael8367/horizon-hydra" target="_blank" rel="noreferrer">GitHub ↗</a>
+      </header>
+      <section class="hero" id="inicio">
+        <div class="hero-copy">
+          <div class="eyebrow"><span></span> SUA PRÓXIMA AVENTURA COMEÇA AQUI</div>
+          <h1>Todos os seus jogos.<br><em>Novos horizontes.</em></h1>
+          <p>Descubra jogos, explore gêneros e encontre páginas oficiais para jogar. Tudo em uma biblioteca simples e organizada.</p>
+          <div class="hero-actions"><a class="btn btn-primary" href="#biblioteca">Explorar biblioteca <span>↗</span></a><a class="btn btn-quiet" href="#sobre">Conhecer o Horizon</a></div>
+          <div class="hero-stats"><div><strong id="gameCount">12</strong><span>JOGOS NA VITRINE</span></div><i></i><div><strong>100%</strong><span>LINKS EXTERNOS</span></div></div>
+        </div>
+        <div class="hero-art" aria-hidden="true"><div class="orb orb-one"></div><div class="orb orb-two"></div><div class="art-ring"></div><div class="art-h">H</div><div class="art-caption">PLAY BEYOND<br><b>THE ORDINARY</b></div><div class="art-chip">HORIZON / 01</div></div>
+      </section>
+      <section class="section" id="biblioteca">
+        <div class="section-heading"><div><div class="eyebrow">SUA COLEÇÃO</div><h2>Biblioteca de jogos</h2><p>Escolha um jogo para ver os detalhes e abrir sua página oficial.</p></div><span class="result-count" id="resultCount">12 jogos</span></div>
+        <div class="filters" id="filters"><button class="filter active" data-category="Todos">Todos</button><button class="filter" data-category="Ação">Ação</button><button class="filter" data-category="Aventura">Aventura</button><button class="filter" data-category="Indie">Indie</button><button class="filter" data-category="Sandbox">Sandbox</button></div>
+        <div class="game-grid" id="gameGrid" aria-live="polite"></div>
+        <div class="empty-state" id="emptyState" hidden><span>⌕</span><h3>Nenhum jogo encontrado</h3><p>Tente outro nome ou categoria.</p><button class="btn btn-quiet" id="resetSearch">Limpar filtros</button></div>
+      </section>
+      <section class="discover" id="descobrir"><div><div class="eyebrow">EXPLORE MAIS</div><h2>Seu próximo favorito<br>está por aí.</h2><p>Use a busca ou filtre por gênero para encontrar algo novo. A biblioteca pode crescer com mais jogos e fontes oficiais.</p></div><a class="btn btn-primary" href="#biblioteca">Ver biblioteca <span>↓</span></a></section>
+      <section class="about" id="sobre"><div class="about-icon">H</div><div><h3>Sobre o Horizon</h3><p>Uma vitrine web independente para descobrir jogos. O site não hospeda jogos nem executa downloads: os botões levam a páginas oficiais ou lojas dos respectivos títulos.</p></div><a href="https://github.com/mikael8367/horizon-hydra" target="_blank" rel="noreferrer">Código-fonte ↗</a></section>
+      <footer><a class="footer-brand" href="#inicio">HORIZON</a><span>Feito para descobrir o que jogar.</span><span>© <span id="year"></span> Horizon Web Library</span></footer>
+    </main>
+  </div>
+</body>
+</html>
