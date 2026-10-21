@@ -1,5 +1,5 @@
-appId: gg.hydralauncher.hydra
-productName: Hydra
+appId: app.horizon.launcher
+productName: Horizon
 beforePack: scripts/legendary-before-pack.cjs
 afterPack: scripts/legendary-after-pack.cjs
 afterSign: scripts/legendary-after-pack.cjs
@@ -34,7 +34,7 @@ asarUnpack:
   - node_modules/sharp/**
   - node_modules/@img/sharp-libvips-*/**
 win:
-  executableName: Hydra
+  executableName: Horizon
   extraResources:
     - from: legendary/win32/${arch}
       to: legendary
@@ -132,7 +132,7 @@ appImage:
 npmRebuild: false
 publish:
   provider: github
-  owner: hydralauncher
-  repo: hydra
+  owner: mikael8367
+  repo: horizon-hydra
 electronDownload:
   mirror: https://npmmirror.com/mirrors/electron/
